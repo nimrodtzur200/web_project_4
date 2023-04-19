@@ -1,7 +1,7 @@
 export const profile = document.querySelector(".profile");
 export const profileEditButton = profile.querySelector(".profile__edit");
-export const profileName = profile.querySelector(".profile__name");
-export const profileDescription = profile.querySelector(
+export const nameSelector = profile.querySelector(".profile__name");
+export const jobSelector = profile.querySelector(
   ".profile__description"
 );
 export const nameText = editProfile.querySelector("#name");

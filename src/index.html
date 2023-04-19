@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Online website for around the us" />
+    <meta name="keywords" content="Practicum, image of U.S, profile" />
     <meta name="author" content="Nimrod Tzur" />
-    <img src="<%= require('./images/favicon.ico')%>" rel="icon" />
     <title>Around the us</title>
+    <link href="<%= require('./images/logo.svg')%>" rel="icon" />
   </head>
 
   <body class="body">
@@ -23,7 +24,7 @@
           />
           <div class="profile__info">
             <div class="profile__info-wrapper">
-              <h1 class="profile__name">Jacques Cousteau</h1>
+              <h1 class="profile__name"></h1>
               <button
                 type="button"
                 class="profile__edit"
@@ -36,7 +37,7 @@
                 />
               </button>
             </div>
-            <p class="profile__description">Explorer</p>
+            <p class="profile__description"></p>
           </div>
           <button
             type="button"
@@ -74,16 +75,18 @@
           </template>
         </section>
       </main>
-
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2022 Around The U.S</p>
+      </footer>
       <div class="popup" id="editProfile">
         <div class="popup__container">
-          <button
-            type="button"
-            class="popup__close-button"
-            id="closeEditProfile"
-          ></button>
+          <button type="button" class="popup__close-button"></button>
           <h3 class="popup__title">Edit profile</h3>
-          <form class="form popup__form" id="editProfileForm">
+          <form
+            class="form popup__form"
+            id="editProfileForm"
+            name="editProfileForm"
+          >
             <fieldset class="form__fieldset">
               <input
                 type="text"
@@ -104,7 +107,7 @@
                 placeholder="About me"
                 required
                 minlength="2"
-                maxlength="200"
+                maxlength="400"
               />
               <span class="aboutme-input-error form__input-error"></span>
             </fieldset>
@@ -116,13 +119,13 @@
       </div>
       <div class="popup" id="createCardPopup">
         <div class="popup__container">
-          <button
-            type="button"
-            class="popup__close-button"
-            id="closeCreateCard"
-          ></button>
+          <button type="button" class="popup__close-button"></button>
           <h3 class="popup__title">New Place</h3>
-          <form class="form popup__form" id="createCardForm">
+          <form
+            class="form popup__form"
+            id="createCardForm"
+            name="createCardForm"
+          >
             <fieldset class="form__fieldset">
               <input
                 type="text"
@@ -167,9 +170,5 @@
         </div>
       </div>
     </div>
-
-    <footer class="footer">
-      <p class="footer__copyright">©️ 2022 Around The U.S</p>
-    </footer>
   </body>
 </html>
